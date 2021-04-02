@@ -1,0 +1,89 @@
+body{
+    color: white;
+}
+header{
+background-image: url('images/background.jpg');
+    height: 400px;
+    background-size: cover;
+}
+.top-50 {
+    top: 70%!important;
+}
+.top-0 {
+    top: 5%!important;
+}
+h2, span {
+    color: white; 
+}
+h3{
+    color: black;
+    font-size: 20px; 
+} 
+.col-6>span{
+    color:black; 
+    font-size: 16px;
+}
+.col-6>p{
+    color:black; 
+    font-size: 16px;
+}
+
+#formInput {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.75);
+    height: 40px;
+    width: 600px;
+    
+}
+/*to fix alignment but not the best solution*/
+.btnVal{
+    margin:none; 
+    position: absolute;
+    left: 595px;
+    top: -9px;
+}
+.form-select {
+    width: auto;
+}
+
+.validateButton{
+    width: auto;
+}
+.mt-3 {
+    margin-top: 5rem!important;
+}
+.agence {
+    text-align: center;
+}
+.textAgency{
+    color: black;
+}
+.w-100 {
+    width: 40%!important;
+}
+.priceCar{
+margin-bottom: none;
+}
+.col-6>.btn-success {
+    color: #fff;
+    background-color: #15c52f;
+    border-color: #15c52f;
+    margin-top: 10px;
+}
+.btn-success {
+    color: #fff;
+    background-color: #15c52f;
+    border-color: #15c52f;
+}
+#filter{
+    text-align: end;
+}
+
+.dropdown-toggle {
+    white-space: nowrap;
+}
+.btn-secondary {
+    color: #000;
+    background-color: #e0dede;
+    border-color:#e0dede; box-shadow: 1px 1px #cacaca;;
+}

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--my bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+            </script>
+        <!--fontawesome cdn-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+            integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+            crossorigin="anonymous" />
+        <!--animate css-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <!--my style sheet-->
+        <link rel="stylesheet" href="css/style.css">
+        <title>Exercice John</title>
+        <!-- my script-->
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+<!--NavBar--> 
+    <header class="position-relative">
+        <!--used g-0 to remove space/gutter in container-->
+        <div class="position-absolute top-0 end-0 translate-middle-x">
+            <nav class="navbar navbar-dark bg-dark btn-group dropstart btn-sm">
+                <div class="container-fluid dropdown">
+                    <button class="navbar-toggler" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" 
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Louer une voiture</a></li>
+                        <li><a class="dropdown-item" href="#">Louer un utiliteur</a></li>
+                        <li><a class="dropdown-item" href="#">Réserver un chauffeur</a></li>
+                        <li><a class="dropdown-item" href="#">Découvrez nos agences</a></li>
+                        <li><a class="dropdown-item" href="#">Mon Compte</a></li>
+                        <li><a class="dropdown-item" href="#">Contact</a></li>
+                    </ul>
+                </div>
+        </div>
+<!--title--> 
+        <div class="position-absolute top-0 start-50 translate-middle-x">
+            <h2>Bienvenue à bord</h2>
+            <span>Location de voiture 24h/24 et 7j/7</span>
+        </div>
+<!--input fields-->    
+        <div class="position-absolute top-50 start-50 translate-middle">
+            <!--input group-->       
+            <div class="row">    
+                <div class="col-6">
+                    <div class="row" id="formInput">
+                <!--address de depart-->       
+                        <div class="col-4 ">
+                            <select class="form-select">
+                                <option selected>Adresse de départ</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col-4 ">
+                <!--Date Picker 1--> 
+                            <input type="date" name="rentDate" class="form-control"id="rentDate placeholder="Date">
+                        </div>
+                <!--Date Picker 2-->
+                        <div class="col-4">
+                            <input type="date" name="rentDate" id="rentDate" class="form-control" placeholder="Date">
+                        </div>
+                    </div>
+                </div>    
+                <!--validate button-->   
+                <div class="col-6">
+                    <button type="button" class="btn btn-success btnVal">Valider ma recherche</button>
+                </div>
+            </div>
+        </div>
+    </header>
+<!--display results-->
+    <section class="container mt-3 ">
+        <div class="row">    
+            <div class=" col-6 result">
+                <h3>7 resultats</h3>
+            </div>
+            <!--filter button-->
+            <div class="col-6" id="filter">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                     Prix croissant
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>    
+        <!--carousel1-->
+        <div class="row justify-content-center">
+            <!--justify content center doesn't work-->
+            <div class="col-6">
+                <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="10000">
+                            <img src="images/vehicule1.png" class="d-block w-50" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="images/vehicule1.png" class="d-block w-50" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/vehicule1.png" class="d-block w-50" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-6 align-self-center ">
+                <h3>Peugot 208</h3>
+                <p>Diesl. 5 protes. GPS.AutoRadio. Forfait 1000km(0.5/km supplémentaire).</p>
+                <span class="priceCar">999 € -Agence de Paris</span><br>
+                <button type="button" class="btn btn-success">Réserver et payer</button>
+            </div>
+        </div>
+        <!--carousel2-->
+        <div class="row justify-content-center">
+            <!--justify content center doesn't work-->
+            <div class="col-6">
+                <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="10000">
+                            <img src="images/vehicule2.png" class="d-block w-50" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="images/vehicule2.png" class="d-block w-50" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/vehicule2.png" class="d-block w-50" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-6 align-self-center ">
+                <h3>Ford Focus</h3>
+                <p>Diesel. 5 portes. GPS.AutoRadio. Forfait 1000km(0.5/km supplémentaire).</p>
+                <span class="priceCar">999 €</span><br>
+                <button type="button" class="btn btn-success">Réserver et payer</button>
+            </div>
+        </div>
+        <!--carousel3-->
+        <div class="row justify-content-center">
+            <!--justify content center doesn't work-->
+            <div class="col-6">
+                <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="10000">
+                            <img src="images/vehicule3.png" class="d-block w-50" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="images/vehicule3.png" class="d-block w-50" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/vehicule3.png" class="d-block w-50" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-6 align-self-center ">
+                <h3>Audi A1</h3>
+                <p>Diesel. 5 portes. GPS.AutoRadio. Forfait 1000km(0.5/km supplémentaire).</p>
+                <span class="priceCar">1100 € - Agence de Paris</span><br>
+                <button type="button" class="btn btn-success">Réserver et payer</button>
+            </div>
+        </div>
+        <!--carouse4-->
+        <div class="row justify-content-center">
+            <!--justify content center doesn't work-->
+            <div class="col-6">
+                <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="10000">
+                            <img src="images/vehicule4.png" class="d-block w-50" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="images/vehicule4.png" class="d-block w-50" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/vehicule4.png" class="d-block w-50" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-6 align-self-center ">
+                <h3>Opel Mokka</h3>
+                <p>Diesel. 5 portes. GPS.AutoRadio. Forfait 1000km(0.5/km supplémentaire).</p>
+                <span class="priceCar">1100 € - Agence de Paris</span><br>
+                <button type="button" class="btn btn-success">Réserver et payer</button>
+            </div>
+        </div>
+    </section>
+    <section class=agencyContainer>
+        <div class="row container mt-3 agence justify-content-center" > <!--justify content center doesnt work-->
+            <div class="col-6" >
+                <img src="images/agence.jpg" class="w-100" alt="building">
+
+            </div>
+            <div class="col-6" >
+                <p><span class="textAgency">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas velit fuga natus exercitationem saepe expedita recusandae distinctio quos mollitia, deserunt quibusdam temporibus! Amet labore enim expedita quod doloribus nemo aspernatur?</span></p>
+
+            </div>
+        </div>
+    </section>
+    </body>
+</html>

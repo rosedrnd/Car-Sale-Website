@@ -1,0 +1,12 @@
+Backlogs
+FRONT/Bootstrap
+1. Don't know how to put date place holder on bootstrap
+2. Alignment of "valider ma recherche" button and input items (bootstrap issues so I modified it with pure css)
+4. "Justify content center" class of bootstrap doesn't work
+
+JAVASCRIPT
+3. Load scroll
+
+
+
+
